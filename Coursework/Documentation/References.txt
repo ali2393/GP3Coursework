@@ -1,0 +1,3 @@
+http://gamedev.stackexchange.com/questions/24894/making-mouse-pos-realtive-to-a-moving-object
+http://www.madgamedev.com/post/2010/09/05/Article-Simple-3D-Camera-in-XNA.aspx
+http://msdn.microsoft.com/en-us/library/bb200104.aspx

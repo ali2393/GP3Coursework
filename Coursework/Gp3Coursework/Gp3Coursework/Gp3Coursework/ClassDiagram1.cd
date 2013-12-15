@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Gp3Coursework.camera">
+    <Position X="4.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACBACAACAAYAAoAAAACaEAAAAAAAAAggAAAABAhAA=</HashCode>
+      <FileName>CSFiles\camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gp3Coursework.Game1">
+    <Position X="6" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACwQEEAEQABEAwgBHAIIEIFwAAkgQAiICzQgyBAICAw=</HashCode>
+      <FileName>CSFiles\Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gp3Coursework.GameConstants">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>hIAAAAAwYAAAgAYAABgACgAAAABCAAAgABMCAAAgAAI=</HashCode>
+      <FileName>CSFiles\GameConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gp3Coursework.Program">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>CSFiles\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Gp3Coursework.Asteroids">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEBAAAIAAAAAABIBAAAgAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>CSFiles\Asteroid.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Gp3Coursework.Stars">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAAAIAAAAAABIBAAAgAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>CSFiles\Star.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Gp3Coursework.EShips">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEBAAAIAAAAAABIBAAAgAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>CSFiles\eShip.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Gp3Coursework.Laser">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAIAAAAAAAIBAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>CSFiles\Laser.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
