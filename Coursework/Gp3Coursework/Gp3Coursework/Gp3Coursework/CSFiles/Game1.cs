@@ -297,7 +297,7 @@ namespace Gp3Coursework
                     if (mdlPosition.Y > 7) mdlPosition.Y = 7;
 
                     // Allows the game to exit
-                    if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Released)
+                    if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                     {
                         this.Exit();
                     }
@@ -336,7 +336,7 @@ namespace Gp3Coursework
                     }
 
                     //fires a laser when A button is pressed if there are lasers in the list to fire
-                    if (gamePadState.Buttons.A == ButtonState.Pressed && (lastGState.Buttons.A == ButtonState.Pressed))
+                    if (gamePadState.Buttons.A == ButtonState.Pressed && (lastGState.Buttons.A == ButtonState.Released))
                     {
                         //add another bullet.  Find an inactive bullet slot and use it
                         //if all bullets slots are used, ignore the user input
@@ -791,14 +791,6 @@ namespace Gp3Coursework
             if (gameState == "Paused")
             {
 
-                for (int i = 0; i < GameConstants.NumAsteroids; i++)
-                {
-                    if (AsteroidList[i].isActive)
-                    {
-                        Matrix AsteroidTransform = Matrix.CreateScale(GameConstants.AsteroidScalar) * Matrix.CreateTranslation(AsteroidList[i].position);
-                        DrawModel(mdlAsteroid, AsteroidTransform, mdlAsteroidTransforms);
-                    }
-                }
                 for (int i = 0; i < GameConstants.NumEShips; i++)
                 {
                     if (EShipList[i].isActive)
@@ -825,16 +817,7 @@ namespace Gp3Coursework
                     }
                 }
 
-                Matrix modelTransform = Matrix.CreateScale(GameConstants.ShipScaler) * Matrix.CreateRotationY(mdlRotation) * Matrix.CreateTranslation(mdlPosition);
-                DrawModel(mdlShip, modelTransform, mdlShipTransforms);
 
-                writeText("Press O to resume Game", new Vector2(GraphicsDevice.Viewport.Width / 2.5f, GraphicsDevice.Viewport.Height / 2), Color.Blue);
-            }
-
-            //display th emain game scene when the game is running
-            if (gameState == "Game")
-            {
-                //sets up and draws asteroids
                 for (int i = 0; i < GameConstants.NumAsteroids; i++)
                 {
                     if (AsteroidList[i].isActive)
@@ -843,6 +826,17 @@ namespace Gp3Coursework
                         DrawModel(mdlAsteroid, AsteroidTransform, mdlAsteroidTransforms);
                     }
                 }
+
+                Matrix modelTransform = Matrix.CreateScale(GameConstants.ShipScaler) * Matrix.CreateRotationY(mdlRotation) * Matrix.CreateTranslation(mdlPosition);
+                DrawModel(mdlShip, modelTransform, mdlShipTransforms);
+
+                writeText("Press O to resume Game", new Vector2(GraphicsDevice.Viewport.Width / 2.5f, GraphicsDevice.Viewport.Height / 2), Color.Blue);
+            }
+
+            //display the main game scene when the game is running
+            if (gameState == "Game")
+            {
+            
                 //sets up and draws enemy ships
                 for (int i = 0; i < GameConstants.NumEShips; i++)
                 {
@@ -868,6 +862,16 @@ namespace Gp3Coursework
                     {
                         Matrix StarTransform = Matrix.CreateScale(GameConstants.StarScalar) * Matrix.CreateTranslation(StarList[i].position);
                         DrawModel(mdlStar, StarTransform, mdlStarTransforms);
+                    }
+                }
+
+                //sets up and draws asteroids
+                for (int i = 0; i < GameConstants.NumAsteroids; i++)
+                {
+                    if (AsteroidList[i].isActive)
+                    {
+                        Matrix AsteroidTransform = Matrix.CreateScale(GameConstants.AsteroidScalar) * Matrix.CreateTranslation(AsteroidList[i].position);
+                        DrawModel(mdlAsteroid, AsteroidTransform, mdlAsteroidTransforms);
                     }
                 }
 
